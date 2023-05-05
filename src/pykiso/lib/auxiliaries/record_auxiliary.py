@@ -226,7 +226,8 @@ class RecordAuxiliary(DTAuxiliaryInterface):
         # get Hex values
         try:
             return data.hex()
-        except Exception:
+        except Exception as e:
+            log.warning(f"Exception when parsing hex values from bytes: {e}")
             pass
 
         # Fail decoding, parse RAW data in string (avoid losing it)
