@@ -1,12 +1,10 @@
-/* exported toggleDetailsInRow */
-
 /**
  * synchronize the toggling of all details elements by class name
  * class name is unique for each test + row combination and gets rendered in by jinja
  * @param {HTMLDetailsElement} element the details element being toggled
  * @param {string} className class attribute of all details elements in the row
  */
-function toggleDetailsInRow(element, className) {
+function toggleDetailsInRow(element, className) { // eslint-disable-line no-unused-vars
     element.scrollIntoView();
     const isOpen = element.hasAttribute("open");
     const detailsElements = document.getElementsByClassName(className);
